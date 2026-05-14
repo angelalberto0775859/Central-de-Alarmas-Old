@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Niebla de seguridad</title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Description -->
+    <meta name="description" content="">
+
+    <!-- KeyWords -->
+    <meta name="keywords" content="">
+
+    <!-- Caché -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!---------------------------------------->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!---------------------------------------->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css?V.Oct.21">
+
+    <!---------------------------------------->
+    <!-- Additional Tools ------>
+
+    <!-- ReCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Validación de ReCaptcha -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("recaptchaField").value = "true";
+        }
+
+        function validarFormulario() {
+            var recaptchaFieldValue = document.getElementById("recaptchaField").value;
+            if (recaptchaFieldValue !== "true") {
+                alert("Por favor, selecciona el recaptcha.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <!-- Condiones de textarea -->
+    <script>
+        function validarTexto(textarea) {
+            var texto = textarea.value;
+            var regex = /^[^<>\/\^`\[\]]*$/; // Excluye <> / ^` y corchetes
+
+            if (!regex.test(texto)) {
+                document.getElementById("mensajeError").textContent = "El texto no puede contener los caracteres <, >, /, ^, `, [ o ].";
+                textarea.value = texto.replace(/[<>\/\^`\[\]]/g, ''); // Elimina caracteres no permitidos
+            } else {
+                document.getElementById("mensajeError").textContent = "";
+            }
+        }
+
+        document.getElementById("texto").addEventListener("input", function() {
+            var maxLength = 1000; // Cambia este valor según tu necesidad
+            var texto = this.value;
+
+            if (texto.length > maxLength) {
+                this.value = texto.slice(0, maxLength);
+            }
+        });
+    </script>
+
+    <!-- Carrusel (Splide) -->
+    <link rel="stylesheet" href="css/splide/pho.css">
+
+    <!-- START CHATBOX WOLKVOX / Feb.12 -->
+    <script id="prodId" type="text/javascript" src="https://widget02.wolkvox.com/chat/?prodId=aW5tb3Rpb24tY2VudHJhbC1kZS1hbGFybWFzLjE2Nzg=" async=""></script>
+
+</head>
+
+<body>
+
+    <!-- Mosca -->
+    <div class="mosca">
+
+        <div class="box">
+
+            <a target="_blank" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor">
+                <img loading="lazy" src="img/ico-whatsapp-mos.svg" alt="WhatsApp">
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Hamburguesa Nav -->
+    <div class="hamburguesa">
+
+        <section class="hamburguesa">
+
+            <!-- Nav -->
+            <div class="grid">
+
+                <div class="logo">
+
+                    <a href="index.html">
+
+                        <img loading="lazy" src="img/cda-logo.svg" alt="Central de Alarmas de México">
+
+                    </a>
+
+                </div>
+
+                <div class="menu">
+
+                    <label for="btn-menu"> <img loading="lazy" src="img/ico-menu.svg" alt="icono menu"></label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <input type="checkbox" id="btn-menu">
+
+        <div class="container-menu">
+
+            <!-- Contenido -->
+            <div class="cont-menu">
+
+                <div class="box">
+
+                    <!-- Top -->
+                    <div class="top">
+
+                        <div class="logo">
+
+                            <a href="index.html">
+
+                                <img loading="lazy" src="img/cda-logo.svg" alt="Central de Alarmas de México Logo">
+
+                            </a>
+
+                        </div>
+
+                        <label for="btn-menu">
+                           
+                            <img loading="lazy" src="img/ico-close.svg" alt="cierre menu">
+
+                        </label>
+
+                    </div>
+
+                    <!-- Contnt -->
+                    <div class="contnt">
+
+                        <div class="links">
+
+                            <a class="a1" href="index.html">Inicio</a>
+                            <a class="a1" href="servicios.html">Servicios</a>
+                            <a class="a1" href="nosotros.html">Nosotros</a>
+                            <a class="a1" href="contacto.html">Contacto</a>
+                            <a class="a1" href="news.html">News</a>
+                            <a class="a1" href="bolsa_de_trabajo.html">Bolsa de trabajo</a>
+
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="links">
+
+                            <a target="_blank" class="a1" href="https://centraldealarmas.systems/#/autentificacion/login">Mi Cuenta</a>
+                            <a class="a1 pay" href="http://centraldealarmas.trytoku.com/accessSource=pub0"><img loading="lazy" src="img/ico-pay.svg" alt="">Pagar</a>
+
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="redes">
+
+                            <!-- Facebook -->
+                            <a target="_blank" href="https://www.facebook.com/?locale=es_LA"><img loading="lazy" src="img/ico-fb.svg" alt="Facebook"></a>
+
+                            <!-- Instagram -->
+                            <a target="_blank" href="https://www.instagram.com/centraldealarmas.mx/"><img loading="lazy" src="img/ico-ig.svg" alt="Instagram"></a>
+
+                            <!-- LinkedIn -->
+                            <a target="_blank" href="https://www.linkedin.com/company/86657867/admin/feed/posts/"><img loading="lazy" src="img/ico-in.svg" alt="LinkedIn"></a>
+
+                            <!-- X -->
+                            <a target="_blank" href="https://twitter.com/newcamsa"><img loading="lazy" src="img/ico-x.svg" alt="X"></a>
+
+                            <!-- TikTok -->
+                            <a target="_blank" href="https://www.tiktok.com/@centraldealarmasdemexico"><img loading="lazy" src="img/ico-tk.svg" alt="TikTok"></a>
+
+                            <!-- YouTube -->
+                            <a target="_blank" href="https://www.youtube.com/channel/UCHBXHHeJ6mpRiPTteQ6AUUA"><img loading="lazy" src="img/ico-youtube.svg" alt="YouTube"></a>
+
+                        </div>
+
+                        <p>©2024 Central de Alarmas de México, S.A. de C.V.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Nav -->
+    <div class="nav">
+
+        <!-- Nav -->
+        <div class="margen">
+
+            <div class="logo">
+
+                <a href="index.html">
+
+                    <img loading="lazy" src="img/cda-logo.svg" alt="Central de Alarmas de México Logo">
+
+                </a>
+
+            </div>
+
+            <div class="links">
+
+                <a class="a1" href="index.html">Inicio</a>
+                <a class="a1" href="servicios.html">Servicios</a>
+                <a class="a1" href="nosotros.html">Nosotros</a>
+                <a class="a1" href="contacto.html">Contacto</a>
+                <a class="a1" href="news.html">News</a>
+                <a class="a1" href="bolsa_de_trabajo.html">Bolsa de trabajo</a>
+                <a class="a1 pay" href="http://centraldealarmas.trytoku.com/accessSource=pub0"><img loading="lazy" src="img/ico-pay.svg" alt="Pagar">Pagar</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Header S. Integrados -->
+    <div class="hsintegrados">
+
+        <h1>Niebla de seguridad</h1>
+
+        <div class="banner b5"></div>
+
+        <p>Sistema de protección activa que utiliza una nube densa de niebla artificial para disuadir y neutralizar a los intrusos. Al activarse, inunda rápidamente un espacio, reduciendo la visibilidad y creando un ambiente hostil para los delincuentes.
+            <br><br> Funcionamiento: <br><br> <b>Detección de intrusión:</b> Sensores o alarmas detectan actividad sospechosa. <br><br> <b>Activación:</b> Se libera la niebla instantáneamente. <br><br> <b>Reducción de visibilidad:</b> Crea una barrera
+            visual impenetrable. <br><br> <b>Disuasión:</b> Desorienta al intruso y dificulta su movimiento. <br><br> <b>Protección de bienes:</b> Oculta objetos valiosos, dificultando su robo. <br><br> Beneficios: <br><br> <b>Rapidez:</b> Despliega la
+            niebla en segundos, neutralizando la amenaza. <br><br> <b>Discreción:</b> Los generadores pueden ser ocultos sin afectar la estética. <br><br> <b>Eficacia:</b> Dificulta la acción de los intrusos al reducir drásticamente la visibilidad. <br><br>            <b>Seguridad:</b> La niebla es inofensiva para personas, animales y objetos. <br><br> <b>Versatilidad:</b> Se adapta a distintos espacios y necesidades. <br><br> <b>Segura:</b> No es tóxica ni daña los aparatos electrónicos.</p>
+
+    </div>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Contacto / Detección de incendios -->
+    <main class="contacto">
+
+        <div class="margen">
+
+            <!-- Txt -->
+            <div class="ctxt">
+
+                <h2>Ponte en contacto con nosotros</h2>
+                <p class="p1">Nuestros clientes han podido comprobar que nuestros servicios sobrepasan las expectativas. <br> <span>¡Compruébalo tú también!</span></p>
+
+            </div>
+
+            <div class="line-a"></div>
+
+            <!-- Formulario -->
+            <form onsubmit="return validarFormulario();" method="post" action="formcontacto.php">
+
+                <!-- Central de Alarmas - Formulario - Niebla Seguridad -->
+                <select class="ghost" name="titulo">
+                    <option value="Central de Alarmas - Formulario - Niebla Seguridad"></option>
+                </select>
+
+                <!-- Nombre -->
+                <div class="box nomb">
+
+                    <p>¿Cuál es tu nombre?</p>
+                    <input class="name" type="text" name="nombre" placeholder="Nombre Completo*" required>
+
+                </div>
+
+                <!-- Correo -->
+                <div class="box corr">
+
+                    <p>¿Cuál es tu correo?</p>
+                    <input type="email" name="correo" placeholder="Email*" required>
+
+                </div>
+
+                <!-- Teléfono -->
+                <div class="box tele">
+
+                    <p>¿Cuál es tu teléfono?</p>
+                    <input type="number" name="telefono" placeholder="Teléfono*" required>
+
+                </div>
+
+                <!-- Servicios -->
+                <div class="box serv">
+
+                    <p>Servicio de interés</p>
+                    <select name="servicios" required>
+                    <option value="No selecciono servicio">Servicio:*</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="PyMES">PyMES</option>
+                    <option value="Corporativo">Corporativo</option>
+                    </select>
+
+                </div>
+
+                <!-- Estado -->
+                <div class="box esta">
+
+                    <p>¿De dónde eres?</p>
+                    <select name="estado" required>
+                    <option value="No selecciono estado">Estado de la República*</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="CDMX">CDMX</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de Mexico">Estado de México</option>
+                    <option value="Guanajuato">Baja California Sur</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacan">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo Leon">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Queretaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosi">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                    </select>
+
+                </div>
+
+                <!-- Mensaje -->
+                <div class="box mens">
+
+                    <p>¿Cómo podemos ayudarte?</p>
+                    <textarea name="mensaje" placeholder="Mensaje*" required id="texto" rows="4" cols="50" oninput="validarTexto(this)"></textarea><br>
+                    <span id="mensajeError"></span>
+
+                </div>
+
+                <!-- Recaptcha -->
+                <div class="g-recaptcha" data-sitekey="6LfjgrQpAAAAABoTmAW2j8d-zxYCKUWbPpb8Fb9G" data-callback="onSubmit"></div>
+                <input type="hidden" id="recaptchaField" name="recaptchaField" value="">
+
+                <!-- Botón -->
+                <button type="submit" value="Submit" class="btn-b"><div class="btn-txt">RECIBE ASESORÍA</div></button>
+
+            </form>
+
+            <div class="line-a"></div>
+
+            <!-- Bloques -->
+            <div class="cbloques">
+
+                <!-- Asesoría comercial -->
+                <div class="box">
+
+                    <h2>Asesoría comercial</h2>
+                    <p class="p1">Lunes a Viernes</p>
+                    <p class="p1">8:00 am a 6:00 pm</p>
+
+                    <div class="btns">
+
+                        <a target="_blank" class="link wa" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor"><img loading="lazy" src="img/ico-whatsapp.svg" alt=""> WhatsApp</a>
+
+                        <a target="_blank" class="link" href="mailto:ventas@centraldealarmas.com.mx"><img loading="lazy" src="img/ico-correo.svg" alt="">Enviar correo</a>
+
+                    </div>
+
+                </div>
+
+                <div class="line-b"></div>
+
+                <!-- Soporte técnico -->
+                <div class="box">
+
+                    <h2>Soporte técnico</h2>
+                    <p class="p1">Atención 24 / 7</p>
+                    <p class="p1">(Opción 6) 8:00 am a 6:00 pm <span>(Opción 2) 6:01 pm a 7:59 am</span></p>
+
+                    <div class="btns">
+
+                        <a target="_blank" class="link so" href="tel:5551340800"><img loading="lazy" src="img/ico-telefono.svg" alt="">Solicitar soporte</a>
+
+                        <a target="_blank" class="link" href="mailto:contigo@centraldealarmas.com.mx"><img loading="lazy" src="img/ico-correo.svg" alt="">Enviar correo</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="line-a"></div>
+
+            <!-- Conmutador -->
+            <div class="conmutador">
+
+                <p>Conmutador:</p>
+                <h2><img loading="lazy" src="img/ico-telefono.svg" alt="">55 5134 0800</h2>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Carrusel (Splide) -->
+    <div class="carrusel">
+
+        <h2>Servicios integrales</h2>
+
+        <div id="splide1" class="splide">
+
+            <div class="splide__track">
+
+                <div class="splide__list">
+
+                    <!-- Monitoreo -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_monitoreo_24_7.html">
+
+                                <div class="cover b1"></div>
+
+                                <div class="txt">
+
+                                    <h2>Monitoreo 24 / 7</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Control de acceso -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_control_de_acceso.html">
+
+                                <div class="cover b2"></div>
+
+                                <div class="txt">
+
+                                    <h2>Control de acceso</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Sistema de intrusión -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_sistema_de_intrusion.html">
+
+                                <div class="cover b3"></div>
+
+                                <div class="txt">
+
+                                    <h2>Sistema de intrusión</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Detección de incendios -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_deteccion_de_incendios.html">
+
+                                <div class="cover b4"></div>
+
+                                <div class="txt">
+
+                                    <h2>Detección de incendios</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Niebla de seguridad -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_niebla_de_seguridad.html">
+
+                                <div class="cover b5"></div>
+
+                                <div class="txt">
+
+                                    <h2>Niebla de seguridad</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Videovigilancia -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_videovigilancia.html">
+
+                                <div class="cover b6"></div>
+
+                                <div class="txt">
+
+                                    <h2>Videovigilancia</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Alertamiento sísmico -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_alertamiento_sismico.html">
+
+                                <div class="cover b7"></div>
+
+                                <div class="txt">
+
+                                    <h2>Alertamiento sísmico</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Cerca eléctrica -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_cerca_electrica.html">
+
+                                <div class="cover b8"></div>
+
+                                <div class="txt">
+
+                                    <h2>Cerca eléctrica</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Cajero automático -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_cajero_automatico.html">
+
+                                <div class="cover b9"></div>
+
+                                <div class="txt">
+
+                                    <h2>Cajero automático</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Centralización de monitoreo -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_centralizacion_de_monitoreo.html">
+
+                                <div class="cover b10"></div>
+
+                                <div class="txt">
+
+                                    <h2>Centralización de monitoreo</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Acceso web corporativo -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_acceso_web_corporativo.html">
+
+                                <div class="cover b11"></div>
+
+                                <div class="txt">
+
+                                    <h2>Acceso web corporativo</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Videoverificación -->
+                    <div class="splide__slide">
+
+                        <div class="box">
+
+                            <a href="si_videoverificacion.html">
+
+                                <div class="cover b12"></div>
+
+                                <div class="txt">
+
+                                    <h2>Videoverificación</h2>
+                                    <p>Ver más</p>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="activadores">
+
+                <div class="splide__arrows">
+
+                    <button class="splide__arrow splide__arrow--prev">
+                        <img loading="lazy" src="img/ico-arrow-left.svg" alt="Flecha">
+                    </button>
+
+                    <button class="splide__arrow splide__arrow--next">
+                        <img src="img/ico-arrow-right.svg" alt="Flecha">
+                    </button>
+
+                </div>
+
+                <ul class="splide__pagination"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="margen">
+
+            <!-- Asesoria -->
+            <div class="asesoria">
+                <a target="_blank" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor">
+                    <img loading="lazy" src="img/asesoria.svg" alt="Asesoria Comercial 55 3253 4159">
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img loading="lazy" src="img/cda-logo.svg" alt="Central de Alarmas de México">
+                </a>
+            </div>
+
+            <!-- Redes -->
+            <div class="redes">
+
+                <!-- Facebook -->
+                <a target="_blank" href="https://www.facebook.com/?locale=es_LA"><img loading="lazy" src="img/ico-fb.svg" alt="Facebook"></a>
+
+                <!-- Instagram -->
+                <a target="_blank" href="https://www.instagram.com/centraldealarmas.mx/"><img loading="lazy" src="img/ico-ig.svg" alt="Instagram"></a>
+
+                <!-- LinkedIn -->
+                <a target="_blank" href="https://www.linkedin.com/company/86657867/admin/feed/posts/"><img loading="lazy" src="img/ico-in.svg" alt="LinkedIn"></a>
+
+                <!-- X -->
+                <a target="_blank" href="https://twitter.com/newcamsa"><img loading="lazy" src="img/ico-x.svg" alt="X"></a>
+
+                <!-- TikTok -->
+                <a target="_blank" href="https://www.tiktok.com/@centraldealarmasdemexico"><img loading="lazy" src="img/ico-tk.svg" alt="TikTok"></a>
+
+                <!-- YouTube -->
+                <a target="_blank" href="https://www.youtube.com/channel/UCHBXHHeJ6mpRiPTteQ6AUUA"><img loading="lazy" src="img/ico-youtube.svg" alt="YouTube"></a>
+
+            </div>
+
+            <!-- B1 -->
+            <div class="b1">
+
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="news.html">News</a>
+                <a href="bolsa_de_trabajo.html">Bolsa de trabajo</a>
+                <a target="_blank" href="https://centraldealarmas.systems/#/autentificacion/login">Mi cuenta</a>
+                <a class="pay" href="http://centraldealarmas.trytoku.com/accessSource=pub0"><img loading="lazy" src="img/ico-pay.svg" alt="Pay">Pagar</a>
+
+            </div>
+
+            <!-- B2 -->
+            <div class="b2">
+
+                <a href="aviso_privacidad.html">Aviso de privacidad</a>
+                <a href="terminos_y_condiciones.html">Términos y condiciones</a>
+
+            </div>
+
+            <!-- B3 -->
+            <div class="b3">
+
+                <a target="_blank" type="application/pdf" href="pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 HOME.pdf">Atención al cliente “Home”</a>
+                <a target="_blank" type="application/pdf" href="pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 ENTERPRISE.pdf">Atención al cliente “Enterprise”</a>
+
+            </div>
+
+            <!-- Legal -->
+            <div class="legal">
+
+                <div class="logos">
+
+                    <img loading="lazy" src="img/gsi.svg" alt="GSI">
+                    <img loading="lazy" class="sz" src="img/dsi.svg" alt="DSi">
+
+                </div>
+
+                <div class="box">
+                    <p>©2024 Central de Alarmas de México, S.A. de C.V. - V. <span class="ph">Phone</span><span class="tb">Tablet</span><span class="dm">DeskTop Mini</span><span class="dt">DeskTop</span></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="color"></div>
+
+
+    <!-- Js -->
+    <!-- Carrusel (Splide) -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var splide1 = new Splide('#splide1', {
+                perPage: 3,
+                perMove: 1,
+                gap: '2rem',
+                padding: '0rem',
+                type: 'loop',
+                drag: 'free',
+                snap: 'true',
+                autoplay: true,
+                breakpoints: {
+                    1080: {
+                        perPage: 2,
+                        gap: '2rem',
+                    },
+                    767: {
+                        perPage: 1,
+                        gap: '2rem',
+                    },
+                },
+            });
+            splide1.mount();
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/***********************************
+
+Ajustes generales
+Actualizado: Jul.19 - 2024
+Hecho con un chingo de <3
+
+***********************************/
+
+//  Generales
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+// Phone - "pho"
+@media (max-width: 767px) {
+    //
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+    //
+    @import "pho";
+}
+
+// Tablet - "tab"
+@media (min-width: 768px) and (max-width: 1023px) {
+    //
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+    //
+    @import "tab";
+}
+
+// DeskTop Mini - "dmn"
+@media (min-width: 1024px) and (max-width: 1440px) {
+    //
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+    //
+    @import "dmn";
+}
+
+// DeskTop - "des"
+@media (min-width: 1441px) {
+    //
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+        margin: 0px;
+        padding: 0px;
+    }
+    //
+    @import "des";
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002956;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #004C97;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

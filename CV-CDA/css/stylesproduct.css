@@ -1,0 +1,1348 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+      margin: 0px;
+      padding: 0px;
+    }
+    .contacto {
+      width: 95%;
+      margin: 0 auto;
+      padding: 3rem 0rem;
+      background-color: #004c97;
+      border-radius: 1.2rem;
+      -webkit-border-radius: 1.2rem;
+      -moz-border-radius: 1.2rem;
+      -ms-border-radius: 1.2rem;
+      -o-border-radius: 1.2rem;
+    }
+    .contacto .margen {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .contacto .margen .ctxt {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: center;
+    }
+    .contacto .margen .ctxt h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .contacto .margen .ctxt .p1 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.4;
+    }
+    .contacto .margen .ctxt .p1 br {
+      display: block;
+    }
+    .contacto .margen .ctxt .p1 span {
+      font-weight: 600;
+    }
+    .contacto .margen .separador-a {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      height: 2px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 0.5rem 0;
+    }
+    .contacto .margen form {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
+    .contacto .margen form .ghost {
+      display: none;
+    }
+    .contacto .margen form .box p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .contacto .margen form .box input,
+    .contacto .margen form .box select,
+    .contacto .margen form .box textarea {
+      font-size: 1rem;
+      font-weight: 400;
+      height: 2.8rem;
+      width: 100%;
+      padding: 0rem 0rem 0rem 1rem;
+      border: solid 1px #002956;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+    }
+    .contacto .margen form .box textarea {
+      height: 4rem;
+      padding-top: 0.8rem;
+      resize: vertical;
+    }
+    .contacto .margen form button {
+      grid-column: 1/2;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #002956;
+      padding: 1rem 0rem;
+      background-color: #fae345;
+      border: none;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
+      margin-top: 1rem;
+    }
+    .footer {
+      position: relative;
+      z-index: 9999;
+      padding: 3rem 0rem;
+      background-color: #003b76;
+    }
+    .footer .margen {
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .footer .margen .asesoria {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .asesoria img {
+      width: 12rem;
+    }
+    .footer .margen .logo {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .logo img {
+      width: 8rem;
+    }
+    .footer .margen .redes {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .footer .margen .redes a img {
+      width: 1.8rem;
+    }
+    .footer .margen .b1 {
+      grid-column: 1/2;
+      grid-row: 4/5;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .footer .margen .b1 a {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer .margen .b1 .pay {
+      font-weight: 600;
+      color: #002956;
+      padding: 0.5rem 1.5rem;
+      background-color: #fae345;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .b1 .pay img {
+      display: block;
+      width: 1.5rem;
+      margin-right: 0.5rem;
+    }
+    .footer .margen .b2 {
+      grid-column: 1/2;
+      grid-row: 5/6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer .margen .b2 a {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer .margen .b3 {
+      grid-column: 1/2;
+      grid-row: 6/7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer .margen .b3 a {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer .margen .legal {
+      grid-column: 1/2;
+      grid-row: 7/8;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .footer .margen .legal .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer .margen .legal .logos img {
+      width: 5.5rem;
+    }
+    .footer .margen .legal .logos .sz {
+      width: 3.2rem;
+    }
+    .footer .margen .legal .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .legal .box p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .footer .margen .legal .box p .dt {
+      color: #fae345;
+    }
+    .footer .margen .legal .box p .ph {
+      display: block;
+    }
+    .footer .margen .legal .box p .tb,
+    .footer .margen .legal .box p .dm {
+      display: none;
+    }
+    .footsm {
+      margin-top: 3rem;
+    }
+  
+    .navnews {
+      width: 100%;
+      z-index: 99999;
+      width: 100%;
+      background-color: #002956;
+    }
+    .navnews .grid {
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.2rem 0rem;
+    }
+    .navnews .grid .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .navnews .grid .logo a img {
+      display: block;
+      width: 7rem;
+    }
+    .navnews .grid .close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navnews .grid .close img {
+      display: block;
+      width: 1.8rem;
+      cursor: pointer;
+    }
+    .contevent {
+      padding-top: 3rem;
+      width: 95%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .contevent .block h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #036;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .contevent .block h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #036;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .contevent .block p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .contevent .block .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    .contevent .block .grid .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+      margin: 0px;
+      padding: 0px;
+    }
+    .contacto {
+      width: 95%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 0rem;
+      background-color: #004c97;
+      border-radius: 1.5rem;
+      -webkit-border-radius: 1.5rem;
+      -moz-border-radius: 1.5rem;
+      -ms-border-radius: 1.5rem;
+      -o-border-radius: 1.5rem;
+    }
+    .contacto .margen {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .contacto .margen .ctxt {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      text-align: center;
+    }
+    .contacto .margen .ctxt h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 {
+      margin-top: 1.3rem;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 br {
+      display: none;
+    }
+    .contacto .margen .ctxt .p1 span {
+      font-weight: 600;
+    }
+    .contacto .margen .separador-a {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      height: 2px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .contacto .margen form {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1.5rem;
+      -moz-column-gap: 1.5rem;
+      column-gap: 1.5rem;
+    }
+    .contacto .margen form .ghost {
+      display: none;
+    }
+    .contacto .margen form .box p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 1.2rem;
+    }
+    .contacto .margen form .box input,
+    .contacto .margen form .box select,
+    .contacto .margen form .box textarea {
+      font-size: 1.1rem;
+      font-weight: 400;
+      height: 3rem;
+      width: 100%;
+      padding: 0rem 0rem 0rem 1rem;
+      border: solid 1px #002956;
+      border-radius: 0.6rem;
+      -webkit-border-radius: 0.6rem;
+      -moz-border-radius: 0.6rem;
+      -ms-border-radius: 0.6rem;
+      -o-border-radius: 0.6rem;
+    }
+    .contacto .margen form button {
+      grid-column: 1/3;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #002956;
+      padding: 0.9rem 0rem;
+      background-color: #fae345;
+      border: none;
+      border-radius: 0.6rem;
+      -webkit-border-radius: 0.6rem;
+      -moz-border-radius: 0.6rem;
+      -ms-border-radius: 0.6rem;
+      -o-border-radius: 0.6rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
+    }
+    .footer {
+      position: relative;
+      z-index: 9999;
+      padding: 4rem 0rem;
+      background-color: #003b76;
+    }
+    .footer .margen {
+      width: 95%;
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .footer .margen .asesoria {
+      grid-column: 1/3;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .asesoria img {
+      width: 14rem;
+    }
+    .footer .margen .logo {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .logo img {
+      width: 9rem;
+    }
+    .footer .margen .redes {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .footer .margen .redes a img {
+      width: 1.9rem;
+    }
+    .footer .margen .b1 {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .footer .margen .b1 a {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b1 .pay {
+      font-weight: 600;
+      color: #002956;
+      padding: 0.4rem 1.8rem;
+      background-color: #fae345;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .b1 .pay img {
+      display: block;
+      width: 1.6rem;
+      margin-right: 0.5rem;
+    }
+    .footer .margen .b2 {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer .margen .b2 a {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b3 {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer .margen .b3 a {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .legal {
+      grid-column: 1/3;
+      grid-row: 5/6;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .footer .margen .legal .logos {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    .footer .margen .legal .logos img {
+      width: 6.5rem;
+    }
+    .footer .margen .legal .logos .sz {
+      width: 3.8rem;
+    }
+    .footer .margen .legal .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .legal .box p {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+    }
+    .footer .margen .legal .box p .dt {
+      color: #fae345;
+    }
+    .footer .margen .legal .box p .ph,
+    .footer .margen .legal .box p .tb,
+    .footer .margen .legal .box p .dm {
+      display: none;
+    }
+    .footsm {
+      margin-top: 5rem;
+    }
+  
+    .navnews {
+      width: 100%;
+      z-index: 99999;
+      width: 100%;
+      background-color: #002956;
+    }
+    .navnews .grid {
+      width: 95%;
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.5rem 0rem;
+    }
+    .navnews .grid .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .navnews .grid .logo a img {
+      display: block;
+      width: 8.5rem;
+    }
+    .navnews .grid .close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navnews .grid .close img {
+      display: block;
+      width: 2rem;
+      cursor: pointer;
+    }
+    .contevent {
+      padding-top: 4rem;
+      width: 95%;
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.2rem;
+    }
+    .contevent .block h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #036;
+      text-align: center;
+    }
+    .contevent .block h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #036;
+      margin-bottom: 1.2rem;
+    }
+    .contevent .block p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .contevent .block .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    .contevent .block .grid .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+      margin: 0px;
+      padding: 0px;
+    }
+    .contacto {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 0rem;
+      background-color: #004c97;
+      border-radius: 1.7rem;
+      -webkit-border-radius: 1.7rem;
+      -moz-border-radius: 1.7rem;
+      -ms-border-radius: 1.7rem;
+      -o-border-radius: 1.7rem;
+    }
+    .contacto .margen {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    .contacto .margen .ctxt {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .contacto .margen .ctxt h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 {
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 br {
+      display: none;
+    }
+    .contacto .margen .ctxt .p1 span {
+      font-weight: 600;
+    }
+    .contacto .margen .separador-a {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      height: 2px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .contacto .margen form {
+      grid-column: 1/2;
+      grid-row: 1/6;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 1.8rem;
+      -moz-column-gap: 1.8rem;
+      column-gap: 1.8rem;
+    }
+    .contacto .margen form .ghost {
+      display: none;
+    }
+    .contacto .margen form .box p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 1.3rem;
+    }
+    .contacto .margen form .box input,
+    .contacto .margen form .box select,
+    .contacto .margen form .box textarea {
+      font-size: 1.2rem;
+      font-weight: 400;
+      height: 3.2rem;
+      width: 100%;
+      padding: 0rem 0rem 0rem 1rem;
+      border: solid 1px #002956;
+      border-radius: 0.7rem;
+      -webkit-border-radius: 0.7rem;
+      -moz-border-radius: 0.7rem;
+      -ms-border-radius: 0.7rem;
+      -o-border-radius: 0.7rem;
+    }
+    .contacto .margen form button {
+      grid-column: 1/3;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #002956;
+      padding: 1rem 0rem;
+      background-color: #fae345;
+      border: none;
+      border-radius: 0.7rem;
+      -webkit-border-radius: 0.7rem;
+      -moz-border-radius: 0.7rem;
+      -ms-border-radius: 0.7rem;
+      -o-border-radius: 0.7rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
+    }
+    .footer {
+      position: relative;
+      z-index: 9999;
+      padding: 5rem 0rem;
+      background-color: #003b76;
+    }
+    .footer .margen {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+    }
+    .footer .margen .asesoria {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .footer .margen .asesoria img {
+      width: 16rem;
+    }
+    .footer .margen .logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .footer .margen .logo img {
+      width: 11rem;
+    }
+    .footer .margen .redes {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer .margen .redes a img {
+      width: 2.1rem;
+    }
+    .footer .margen .b1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1.8rem;
+    }
+    .footer .margen .b1 a {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b1 .pay {
+      font-weight: 600;
+      color: #002956;
+      padding: 0.4rem 2rem;
+      background-color: #fae345;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .b1 .pay img {
+      display: block;
+      width: 1.8rem;
+      margin-right: 0.6rem;
+    }
+    .footer .margen .b2 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+    .footer .margen .b2 a {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b3 {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+    .footer .margen .b3 a {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .legal {
+      grid-column: 1/4;
+      grid-row: 3/4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .footer .margen .legal .logos {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer .margen .legal .logos img {
+      width: 7.5rem;
+    }
+    .footer .margen .legal .logos .sz {
+      width: 4.5rem;
+    }
+    .footer .margen .legal .box {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .footer .margen .legal .box p {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .footer .margen .legal .box p .dt {
+      color: #fae345;
+    }
+    .footer .margen .legal .box p .ph,
+    .footer .margen .legal .box p .tb,
+    .footer .margen .legal .box p .dm {
+      display: none;
+    }
+    .footsm {
+      margin-top: 6rem;
+    }
+  
+    .navnews {
+      width: 100%;
+      z-index: 99999;
+      width: 100%;
+      background-color: #002956;
+    }
+    .navnews .grid {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.8rem 0rem;
+    }
+    .navnews .grid .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .navnews .grid .logo a img {
+      display: block;
+      width: 10rem;
+    }
+    .navnews .grid .close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navnews .grid .close img {
+      display: block;
+      width: 2.2rem;
+      cursor: pointer;
+    }
+    .contevent {
+      padding-top: 5rem;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .contevent .block h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #036;
+    }
+    .contevent .block h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #036;
+      margin-bottom: 1.3rem;
+    }
+    .contevent .block p {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    .contevent .block .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+    .contevent .block .grid .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+  }
+  @media (min-width: 1441px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    p {
+      margin: 0px;
+      padding: 0px;
+    }
+    .contacto {
+      width: 1000px;
+      margin: 0 auto;
+      padding: 6rem 0rem;
+      background-color: #004c97;
+      border-radius: 1.7rem;
+      -webkit-border-radius: 1.7rem;
+      -moz-border-radius: 1.7rem;
+      -ms-border-radius: 1.7rem;
+      -o-border-radius: 1.7rem;
+    }
+    .contacto .margen {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .contacto .margen .ctxt {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .contacto .margen .ctxt h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 {
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .contacto .margen .ctxt .p1 br {
+      display: none;
+    }
+    .contacto .margen .ctxt .p1 span {
+      font-weight: 600;
+    }
+    .contacto .margen .separador-a {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      height: 2px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .contacto .margen form {
+      grid-column: 1/2;
+      grid-row: 1/6;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+      -moz-column-gap: 2rem;
+      column-gap: 2rem;
+    }
+    .contacto .margen form .ghost {
+      display: none;
+    }
+    .contacto .margen form .box p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .contacto .margen form .box input,
+    .contacto .margen form .box select,
+    .contacto .margen form .box textarea {
+      font-size: 1.3rem;
+      font-weight: 400;
+      height: 3.5rem;
+      width: 100%;
+      padding: 0rem 0rem 0rem 1rem;
+      border: solid 1px #002956;
+      border-radius: 0.7rem;
+      -webkit-border-radius: 0.7rem;
+      -moz-border-radius: 0.7rem;
+      -ms-border-radius: 0.7rem;
+      -o-border-radius: 0.7rem;
+    }
+    .contacto .margen form button {
+      grid-column: 1/3;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #002956;
+      padding: 1.2rem 0rem;
+      background-color: #fae345;
+      border: none;
+      border-radius: 0.7rem;
+      -webkit-border-radius: 0.7rem;
+      -moz-border-radius: 0.7rem;
+      -ms-border-radius: 0.7rem;
+      -o-border-radius: 0.7rem;
+      cursor: pointer;
+      box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
+    }
+    .footer {
+      position: relative;
+      z-index: 9999;
+      padding: 6rem 0rem;
+      background-color: #003b76;
+    }
+    .footer .margen {
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6rem;
+    }
+    .footer .margen .asesoria {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .footer .margen .asesoria img {
+      width: 19rem;
+    }
+    .footer .margen .logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .footer .margen .logo img {
+      width: 13rem;
+    }
+    .footer .margen .redes {
+      grid-column: 3/4;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer .margen .redes a img {
+      width: 2.3rem;
+    }
+    .footer .margen .b1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .footer .margen .b1 a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b1 .pay {
+      font-weight: 600;
+      color: #002956;
+      padding: 0.5rem 2.5rem;
+      background-color: #fae345;
+      border-radius: 0.5rem;
+      -webkit-border-radius: 0.5rem;
+      -moz-border-radius: 0.5rem;
+      -ms-border-radius: 0.5rem;
+      -o-border-radius: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer .margen .b1 .pay img {
+      display: block;
+      width: 2rem;
+      margin-right: 0.7rem;
+    }
+    .footer .margen .b2 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .footer .margen .b2 a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .b3 {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .footer .margen .b3 a {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer .margen .legal {
+      grid-column: 1/4;
+      grid-row: 3/4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .footer .margen .legal .logos {
+      display: flex;
+      gap: 2rem;
+    }
+    .footer .margen .legal .logos img {
+      width: 9rem;
+    }
+    .footer .margen .legal .logos .sz {
+      width: 5rem;
+    }
+    .footer .margen .legal .box {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .footer .margen .legal .box p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    .footer .margen .legal .box p .dt {
+      color: #fae345;
+    }
+    .footer .margen .legal .box p .ph,
+    .footer .margen .legal .box p .tb,
+    .footer .margen .legal .box p .dm {
+      display: none;
+    }
+    .footsm {
+      margin-top: 8rem;
+    }
+
+    .navnews {
+      width: 100%;
+      z-index: 99999;
+      width: 100%;
+      background-color: #002956;
+    }
+    .navnews .grid {
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2rem 0rem;
+    }
+    .navnews .grid .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .navnews .grid .logo a img {
+      display: block;
+      width: 12rem;
+    }
+    .navnews .grid .close {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navnews .grid .close img {
+      display: block;
+      width: 2.5rem;
+      cursor: pointer;
+    }
+    .contevent {
+      padding-top: 6rem;
+      width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .contevent .block h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: #036;
+    }
+    .contevent .block h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #036;
+      margin-bottom: 1.5rem;
+    }
+    .contevent .block p {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    .contevent .block .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .contevent .block .grid .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .img {
+      max-width: 350px; 
+      width: 100%;         
+      height: auto;
+      display: block;
+      margin: 2rem 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  } /*# sourceMappingURL=styles.css.map */
+  

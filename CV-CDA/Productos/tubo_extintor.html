@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Monitorista</title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Description -->
+    <meta name="description" content="Monitorista CAMSA">
+
+    <!-- KeyWords -->
+    <meta name="keywords" content="Monitorista CAMSA">
+
+    <!-- Caché -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!---------------------------------------->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!---------------------------------------->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/stylesproduct.css">
+
+    <!---------------------------------------->
+    <!-- Additional Tools ------>
+
+</head>
+
+<body>
+
+    <!-- Nav News -->
+    <div class="navnews">
+
+        <div class="grid">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/cda-logo.svg" alt="Central de Alarmas">
+                </a>
+            </div>
+
+            <div class="close">
+                <a href="../tienda.html">
+                    <img src="../img/ico-close.svg" alt="Cerrar">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contenido Venta -->
+    <main class="contevent">
+
+        <!-- Titulo, Ciudades -->
+        <div class="block">
+            <h1>Tubo extintor automático</h1>
+            </div>
+
+        <!--Imagen-->
+        <div class="img">
+        <img src="../img_demo/manguera_antinsendios.jpg" alt="Descripción de la imagen">
+        </div>
+
+        <!-- ¿Qué es? -->
+        <div class="block">
+
+            <h2>¿Qué es?</h2>
+            <p>Es un tubo presurizado lleno de agente extintor (como FM-200, Novec 1230 o polvo seco) que se instala sobre el motor. El tubo está diseñado para reventar en el punto donde la temperatura supera cierto umbral 
+                (por ejemplo, 120°C). Al romperse, libera el agente directamente en la zona caliente o en llamas, apagando el fuego al instante.</p>
+
+        </div>
+
+        <!-- Caracteristicas -->
+        <div class="block">
+
+            <h2>Características clave:</h2>
+
+            <div class="grid">
+
+                <div class="item">
+                    <p>-</p>
+                    <p>No requiere baterías ni sensores electrónicos.</p>
+                </div>
+
+                <div class="item">
+                    <p>-</p>
+                    <p>Se activa de forma totalmente automática y autónoma.</p>
+                </div>
+
+                <div class="item">
+                    <p>-</p>
+                    <p>Ideal para vehículos, cuartos eléctricos, maquinaria, etc.</p>
+                </div>
+
+                <div class="item">
+                    <p>-</p>
+                    <p>Fácil instalación en la tapa del motor o sobre el bloque.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+           <!-- Fantasma -->
+    <div class="fantasma"></div>
+    </main>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Contacto / Compra -->
+    <main class="contacto">
+
+        <div class="margen">
+
+            <!-- Txt -->
+            <div class="ctxt">
+
+                <h2>¡Pide el tuyo!</h2>
+                <p class="p1">También puede escribirnos por chat a través de WhatsApp.</p>
+
+            </div>
+
+            <!-- Formulario -->
+            <form onsubmit="return validarFormulario();" method="post" action="../formtienda.php">
+
+                <!-- Central de Alarmas - Compra -->
+                <select class="ghost" name="titulo">
+                    <option value="Central de Alarmas - B.Trabajo - Monitorista"></option>
+                </select>
+
+                <!-- Nombre -->
+                <div class="box nomb">
+
+                    <p>¿Cuál es tu nombre?</p>
+                    <input class="name" type="text" name="nombre" placeholder="Nombre Completo*" required>
+
+                </div>
+
+                <!-- Correo -->
+                <div class="box corr">
+
+                    <p>¿Cuál es tu correo?</p>
+                    <input type="email" name="correo" placeholder="Email*" required>
+
+                </div>
+
+                <!-- Teléfono -->
+                <div class="box tele">
+
+                    <p>¿Cuál es tu teléfono?</p>
+                    <input type="number" name="telefono" placeholder="Teléfono*" required>
+
+                </div>
+
+                <!-- Producto -->
+                <div class="box serv">
+
+                    <p>Producto de interés</p>
+                    <select name="producto" required>
+                    <option value="No selecciono producto">Selecciona un producto</option>
+                    <option value="Tubo - extintor">Tubo extintor automático</option>
+                    </select>
+
+                </div>
+
+                <!-- Estado -->
+                <div class="box esta">
+
+                    <p>¿De dónde eres?</p>
+                    <select name="estado" required>
+                    <option value="No selecciono estado">Estado de la República*</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="CDMX">CDMX</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de Mexico">Estado de México</option>
+                    <option value="Guanajuato">Baja California Sur</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacan">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo Leon">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Queretaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosi">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                    </select>
+
+                </div>
+
+                <!-- Recaptcha -->
+                <div class="g-recaptcha" data-sitekey="6LfjgrQpAAAAABoTmAW2j8d-zxYCKUWbPpb8Fb9G" data-callback="onSubmit"></div>
+                <input type="hidden" id="recaptchaField" name="recaptchaField" value="">
+
+                <!-- Botón -->
+                <button type="submit" value="Submit" class="btn-b"><div class="btn-txt">Enviar</div></button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footsm">
+
+        <div class="margen">
+
+            <!-- Asesoria -->
+            <div class="asesoria">
+                <a target="_blank" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor">
+                    <img loading="lazy" src="../img/asesoria.svg" alt="Asesoria Comercial 55 3253 4159">
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html">
+                    <img loading="lazy" src="../img/cda-logo.svg" alt="Central de Alarmas de México">
+                </a>
+            </div>
+
+            <!-- Redes -->
+            <div class="redes">
+
+                <!-- Facebook -->
+                <a target="_blank" href="https://www.facebook.com/?locale=es_LA"><img loading="lazy" src="../img/ico-fb.svg" alt="Facebook"></a>
+
+                <!-- Instagram -->
+                <a target="_blank" href="https://www.instagram.com/centraldealarmas.mx/"><img loading="lazy" src="../img/ico-ig.svg" alt="Instagram"></a>
+
+                <!-- LinkedIn -->
+                <a target="_blank" href="https://www.linkedin.com/company/86657867/admin/feed/posts/"><img loading="lazy" src="../img/ico-in.svg" alt="LinkedIn"></a>
+
+                <!-- X -->
+                <a target="_blank" href="https://twitter.com/newcamsa"><img loading="lazy" src="../img/ico-x.svg" alt="X"></a>
+
+                <!-- TikTok -->
+                <a target="_blank" href="https://www.tiktok.com/@centraldealarmasdemexico"><img loading="lazy" src="../img/ico-tk.svg" alt="TikTok"></a>
+
+                <!-- YouTube -->
+                <a target="_blank" href="https://www.youtube.com/channel/UCHBXHHeJ6mpRiPTteQ6AUUA"><img loading="lazy" src="../img/ico-youtube.svg" alt="YouTube"></a>
+
+            </div>
+
+            <!-- B1 -->
+            <div class="b1">
+
+                <a href="../index.html">Inicio</a>
+                <a href="../servicios.html">Servicios</a>
+                <a href="../nosotros.html">Nosotros</a>
+                <a href="../contacto.html">Contacto</a>
+                <a href="../news.html">News</a>
+                <a href="../bolsa_de_trabajo.html">Bolsa de trabajo</a>
+                <a target="_blank" href="https://centraldealarmas.systems/#/autentificacion/login">Mi cuenta</a>
+                <a class="pay" href="http://centraldealarmas.trytoku.com/accessSource=pub0"><img loading="lazy" src="../img/ico-pay.svg" alt="Pay">Pagar</a>
+
+            </div>
+
+            <!-- B2 -->
+            <div class="b2">
+
+                <a href="../aviso_privacidad.html">Aviso de privacidad</a>
+                <a href="../terminos_y_condiciones.html">Términos y condiciones</a>
+
+            </div>
+
+            <!-- B3 -->
+            <div class="b3">
+
+                <a target="_blank" type="application/pdf" href="../pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 HOME.pdf">Atención al cliente “Home”</a>
+                <a target="_blank" type="application/pdf" href="../pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 ENTERPRISE.pdf">Atención al cliente “Enterprise”</a>
+
+            </div>
+
+            <!-- Legal -->
+            <div class="legal">
+
+                <div class="logos">
+
+                    <img loading="lazy" src="../img/gsi.svg" alt="GSI">
+                    <img loading="lazy" class="sz" src="../img/dsi.svg" alt="DSi">
+
+                </div>
+
+                <div class="box">
+                    <p>©2025 Central de Alarmas de México, S.A. de C.V. - V. <span class="ph">Phone</span><span class="tb">Tablet</span><span class="dm">DeskTop Mini</span><span class="dt">DeskTop</span></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="color"></div>
+
+</body>
+
+</html>

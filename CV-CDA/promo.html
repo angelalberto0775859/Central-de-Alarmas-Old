@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Promo</title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Description -->
+    <meta name="description" content="Promo">
+
+    <!-- KeyWords -->
+    <meta name="keywords" content="Promo">
+
+    <!-- Caché -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <!---------------------------------------->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!---------------------------------------->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css?V.Sep.05">
+
+    <!---------------------------------------->
+    <!-- Additional Tools ------>
+
+    <!-- ReCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Validación de ReCaptcha -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("recaptchaField").value = "true";
+        }
+
+        function validarFormulario() {
+            var recaptchaFieldValue = document.getElementById("recaptchaField").value;
+            if (recaptchaFieldValue !== "true") {
+                alert("Por favor, selecciona el recaptcha.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <!-- Condiones de textarea -->
+    <script>
+        function validarTexto(textarea) {
+            var texto = textarea.value;
+            var regex = /^[^<>\/\^`\[\]]*$/; // Excluye <> / ^` y corchetes
+
+            if (!regex.test(texto)) {
+                document.getElementById("mensajeError").textContent = "El texto no puede contener los caracteres <, >, /, ^, `, [ o ].";
+                textarea.value = texto.replace(/[<>\/\^`\[\]]/g, ''); // Elimina caracteres no permitidos
+            } else {
+                document.getElementById("mensajeError").textContent = "";
+            }
+        }
+
+        document.getElementById("texto").addEventListener("input", function() {
+            var maxLength = 1000; // Cambia este valor según tu necesidad
+            var texto = this.value;
+
+            if (texto.length > maxLength) {
+                this.value = texto.slice(0, maxLength);
+            }
+        });
+    </script>
+
+    <!-- START CHATBOX WOLKVOX / Feb.12 -->
+    <script id="prodId" type="text/javascript" src="https://widget02.wolkvox.com/chat/?prodId=aW5tb3Rpb24tY2VudHJhbC1kZS1hbGFybWFzLjE2Nzg=" async=""></script>
+
+</head>
+
+<body>
+
+    <!-- Mosca -->
+    <div class="mosca">
+
+        <div class="box">
+
+            <a target="_blank" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor">
+                <img loading="lazy" src="img/ico-whatsapp-mos.svg" alt="WhatsApp">
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Nav News -->
+    <div class="navnews">
+
+        <div class="grid">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/cda-logo.svg" alt="Central de Alarmas">
+                </a>
+            </div>
+
+            <div class="close">
+                <a href="index.html">
+                    <img src="img/ico-close.svg" alt="Cerrar">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Contenido Promo -->
+    <main class="contntpromo">
+
+        <h3>Promo Agosto 2024</h3>
+        <h1>"Porque ellos lo dieron todo, ahora nosotros damos lo mejor"</h1>
+
+        <div class="banner">
+
+            <!-- Phone -->
+            <div class="pho">
+                <img src="img/promo/promo-agosto-pho-b.png" alt="Promo del mes">
+            </div>
+
+            <!-- Tab / Desk -->
+            <div class="tdk">
+                <img src="img/promo/promo-agosto-tabdesk.png" alt="Promo del mes">
+            </div>
+
+        </div>
+
+        <h2>Términos y condiciones:</h2>
+
+        <div class="grid">
+
+            <div class="item">
+                <p>-</p>
+                <p>Contrato a 24 Meses.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Adquiriendo servicio de monitoreo.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Aplica a nivel nacional.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Único pago por kit de equipo desde $1,800 mxn + IVA.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Aplica para Hogar y PyMEs.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Domiciliado TDC o TDD.</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>Planes desde $899 mxn al mes. (+ IVA)</p>
+            </div>
+
+            <div class="item">
+                <p>-</p>
+                <p>*⁠Vigencia del 12 al 31 de Agosto 2024.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Fantasma -->
+    <div class="fantasma"></div>
+
+    <!-- Contacto / Inicio -->
+    <main class="contacto">
+
+        <div class="margen">
+
+            <!-- Txt -->
+            <div class="ctxt">
+
+                <h2>Ponte en contacto con nosotros</h2>
+                <p class="p1">Nuestros clientes han podido comprobar que nuestros servicios sobrepasan las expectativas. <br> <span>¡Compruébalo tú también!</span></p>
+
+            </div>
+
+            <div class="line-a"></div>
+
+            <!-- Formulario -->
+            <form onsubmit="return validarFormulario();" method="post" action="formcontacto.php">
+
+                <!-- Central de Alarmas - Formulario - Promo -->
+                <select class="ghost" name="titulo">
+                    <option value="Central de Alarmas - Formulario - Promo"></option>
+                </select>
+
+                <!-- Nombre -->
+                <div class="box nomb">
+
+                    <p>¿Cuál es tu nombre?</p>
+                    <input class="name" type="text" name="nombre" placeholder="Nombre Completo*" required>
+
+                </div>
+
+                <!-- Correo -->
+                <div class="box corr">
+
+                    <p>¿Cuál es tu correo?</p>
+                    <input type="email" name="correo" placeholder="Email*" required>
+
+                </div>
+
+                <!-- Teléfono -->
+                <div class="box tele">
+
+                    <p>¿Cuál es tu teléfono?</p>
+                    <input type="number" name="telefono" placeholder="Teléfono*" required>
+
+                </div>
+
+                <!-- Servicios -->
+                <div class="box serv">
+
+                    <p>Servicio de interés</p>
+                    <select name="servicios" required>
+                    <option value="No selecciono servicio">Servicio:*</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="PyMES">PyMES</option>
+                    <option value="Empresa">Empresa</option>
+                    </select>
+
+                </div>
+
+                <!-- Estado -->
+                <div class="box esta">
+
+                    <p>¿De dónde eres?</p>
+                    <select name="estado" required>
+                    <option value="No selecciono estado">Estado de la República*</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="CDMX">CDMX</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de Mexico">Estado de México</option>
+                    <option value="Guanajuato">Baja California Sur</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacan">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo Leon">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Queretaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosi">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                    </select>
+
+                </div>
+
+                <!-- Mensaje -->
+                <div class="box mens">
+
+                    <p>¿Cómo podemos ayudarte?</p>
+                    <textarea name="mensaje" placeholder="Mensaje*" required id="texto" rows="4" cols="50" oninput="validarTexto(this)"></textarea><br>
+                    <span id="mensajeError"></span>
+
+                </div>
+
+                <!-- Recaptcha -->
+                <div class="g-recaptcha" data-sitekey="6LfjgrQpAAAAABoTmAW2j8d-zxYCKUWbPpb8Fb9G" data-callback="onSubmit"></div>
+                <input type="hidden" id="recaptchaField" name="recaptchaField" value="">
+
+                <!-- Botón -->
+                <button type="submit" value="Submit" class="btn-b"><div class="btn-txt">RECIBE ASESORÍA</div></button>
+
+            </form>
+
+            <div class="line-a"></div>
+
+            <!-- Bloques -->
+            <div class="cbloques">
+
+                <!-- Asesoría comercial -->
+                <div class="box">
+
+                    <h2>Asesoría comercial</h2>
+                    <p class="p1">Lunes a Viernes</p>
+                    <p class="p1">8:00 am a 6:00 pm</p>
+
+                    <div class="btns">
+
+                        <a target="_blank" class="link wa" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor"><img loading="lazy" src="img/ico-whatsapp.svg" alt=""> WhatsApp</a>
+
+                        <a target="_blank" class="link" href="mailto:ventas@centraldealarmas.com.mx"><img loading="lazy" src="img/ico-correo.svg" alt="">Enviar correo</a>
+
+                    </div>
+
+                </div>
+
+                <div class="line-b"></div>
+
+                <!-- Soporte técnico -->
+                <div class="box">
+
+                    <h2>Soporte técnico</h2>
+                    <p class="p1">Atención 24 / 7</p>
+                    <p class="p1">(Opción 6) 8:00 am a 6:00 pm <span>(Opción 2) 6:01 pm a 7:59 am</span></p>
+
+                    <div class="btns">
+
+                        <a target="_blank" class="link so" href="tel:5551340800"><img loading="lazy" src="img/ico-telefono.svg" alt="">Solicitar soporte</a>
+
+                        <a target="_blank" class="link" href="mailto:contigo@centraldealarmas.com.mx"><img loading="lazy" src="img/ico-correo.svg" alt="">Enviar correo</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="line-a"></div>
+
+            <!-- Conmutador -->
+            <div class="conmutador">
+
+                <p>Conmutador:</p>
+                <h2><img loading="lazy" src="img/ico-telefono.svg" alt="">55 5134 0800</h2>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footsm">
+
+        <div class="margen">
+
+            <!-- Asesoria -->
+            <div class="asesoria">
+                <a target="_blank" href="https://wa.me/5532534159?text=Hola%20me%20interesa%20contactar%20con%20un%20asesor">
+                    <img loading="lazy" src="img/asesoria.svg" alt="Asesoria Comercial 55 3253 4159">
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img loading="lazy" src="img/cda-logo.svg" alt="Central de Alarmas de México">
+                </a>
+            </div>
+
+            <!-- Redes -->
+            <div class="redes">
+
+                <!-- Facebook -->
+                <a target="_blank" href="https://www.facebook.com/?locale=es_LA"><img loading="lazy" src="img/ico-fb.svg" alt="Facebook"></a>
+
+                <!-- Instagram -->
+                <a target="_blank" href="https://www.instagram.com/centraldealarmas.mx/"><img loading="lazy" src="img/ico-ig.svg" alt="Instagram"></a>
+
+                <!-- LinkedIn -->
+                <a target="_blank" href="https://www.linkedin.com/company/86657867/admin/feed/posts/"><img loading="lazy" src="img/ico-in.svg" alt="LinkedIn"></a>
+
+                <!-- X -->
+                <a target="_blank" href="https://twitter.com/newcamsa"><img loading="lazy" src="img/ico-x.svg" alt="X"></a>
+
+                <!-- TikTok -->
+                <a target="_blank" href="https://www.tiktok.com/@centraldealarmasdemexico"><img loading="lazy" src="img/ico-tk.svg" alt="TikTok"></a>
+
+                <!-- YouTube -->
+                <a target="_blank" href="https://www.youtube.com/channel/UCHBXHHeJ6mpRiPTteQ6AUUA"><img loading="lazy" src="img/ico-youtube.svg" alt="YouTube"></a>
+
+            </div>
+
+            <!-- B1 -->
+            <div class="b1">
+
+                <a class="a1" href="index.html">Inicio</a>
+
+                  <!-- Item con dropdown -->
+        <div class="nav-item">
+            <a class="a1">
+                Servicios
+                <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown">
+                <a class="dropdown-item" href="sg_hogar.html">Hogar</a>
+                <a class="dropdown-item" href="sg_pymes.html">PyMES</a>
+                <a class="dropdown-item" href="sgEmpresa.html">Empresa</a>
+            </div>
+        </div>
+                <a class="a1" href="nosotros.html">Nosotros</a>
+                <a class="a1" href="contacto.html">Contacto</a>
+                <a class="a1" href="news.html">News</a>
+                <a class="a1" href="bolsa_de_trabajo.html">Bolsa de Trabajo</a>
+                <a class="a1 pay" href="http://centraldealarmas.trytoku.com/accessSource=pub0"><img loading="lazy" src="img/ico-pay.svg" alt="Pagar">Pagar</a>
+
+            </div>
+
+            <!-- B2 -->
+            <div class="b2">
+{{ ... }}
+                <a href="aviso_privacidad.html">Aviso de privacidad</a>
+                <a href="">Términos y condiciones</a>
+
+            </div>
+
+            <!-- B3 -->
+            <div class="b3">
+
+                <a target="_blank" type="application/pdf" href="pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 HOME.pdf">Atención al cliente “Home”</a>
+                <a target="_blank" type="application/pdf" href="pdf/POLÍTICA DE ATENCIÓN A CLIENTES 2024 ENTERPRISE.pdf">Atención al cliente “Enterprise”</a>
+
+            </div>
+
+            <!-- Legal -->
+            <div class="legal">
+
+                <div class="logos">
+
+                    <img loading="lazy" src="img/gsi.svg" alt="GSI">
+                    <img loading="lazy" class="sz" src="img/dsi.svg" alt="DSi">
+
+                </div>
+
+                <div class="box">
+                    <p>©2025 Central de Alarmas de México, S.A. de C.V. - V. <span class="ph">Phone</span><span class="tb">Tablet</span><span class="dm">DeskTop Mini</span><span class="dt">DeskTop</span></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="color"></div>
+
+
+    <!-- Js -->
+    <!-- Header / Promo -->
+    <script src="js/header-promo/script.js?V.Fecha"></script>
+
+</body>
+
+</html>

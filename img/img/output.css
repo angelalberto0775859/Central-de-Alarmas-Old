@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Título del banner antena */
+.titulo-antena {
+    font-size: 3rem;
+    color: #003569;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+/* Banner antena */
+.bantena {
+    width: 100%;
+    max-width: 1094px; /* Más ancho para pantallas grandes */
+    margin: 2rem auto;
+    padding-left: 16px;  /* Margen interno para no tocar bordes */
+    padding-right: 16px; /* Igual que gap de videos de abajo */
+    padding-top: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 32px;
+}
+
+/* Contenedor del video */
+.bantena .video {
+    display: flex;
+    justify-content: center;
+}
+
+/* iframe del video principal */
+.bantena .video iframe {
+    width: 100%;
+    max-width: calc((100% - 16px)); /* ancho total menos margen interno */
+    height: 450px;
+    border-radius: 16px;
+}
+
+/* Banner expo */
+.bexpo {
+    max-width: 1200px; /* Mismo max-width que arriba */
+    margin: 0 auto 2rem auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+/* Contenedor de videos expo */
+.bexpo .videos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Igual que padding horizontal */
+}
+
+/* Videos expo en mobile */
+.bexpo .videos iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 16px;
+}
+
+/* Banner */
+.banner1 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.banner2 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .bexpo .videos {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bexpo .videos iframe {
+        width: calc((100% - 16px) / 2); /* 2 videos + gap de 16px */
+        height: 315px;
+    }
+}
